@@ -28,12 +28,95 @@ details { background: #fff; border: 1px solid #e2e7ee; border-radius: 10px; padd
 summary { cursor: pointer; font-weight: 600; }
 footer { padding: 30px 20px; text-align: center; color: #6b7787; font-size: .85rem; }
 </style>
+
+<style>
+:root { scroll-behavior:smooth; }
+body {
+  background:#f5f7fb;
+  color:#202b3c;
+  line-height:1.65;
+}
+.hero {
+  position:relative;
+  overflow:hidden;
+  text-align:left;
+  padding:88px 20px 76px;
+  background:radial-gradient(ellipse at 85% 15%,#345b83 0,transparent 40%),linear-gradient(135deg,#111d2d,#203a55);
+}
+.hero .wrap { max-width:1050px; }
+.hero h1 { max-width:760px;font-size:clamp(2.4rem,6vw,4.3rem);line-height:1.08;letter-spacing:-.045em; }
+.hero p { max-width:680px;margin-left:0;font-size:1.08rem; }
+.hero .cta { background:#f0b84b;color:#172334;box-shadow:0 8px 22px #0003; }
+.hero .checkout-note { font-size:.88rem; }
+main.wrap { max-width:1080px; }
+section { padding:58px 0; }
+h2 { font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;letter-spacing:-.025em; }
+.section-intro { max-width:700px;color:#657287;font-size:1.06rem; }
+.grid { gap:22px; }
+.benefit,.tier {
+  border:1px solid #e0e6ef;
+  border-radius:20px;
+  padding:28px;
+  box-shadow:0 8px 24px #24344b09;
+  transition:transform .18s,box-shadow .18s;
+}
+.benefit:hover,.tier:hover { transform:translateY(-3px);box-shadow:0 14px 32px #24344b12; }
+.benefit h3 { color:#234e73;font-size:1.2rem; }
+.benefit p,.tier-desc { color:#59677b; }
+.tier { position:relative; }
+.tier.featured {
+  border:2px solid #2d6c9f;
+  box-shadow:0 14px 36px #245d8b1b;
+  background:linear-gradient(180deg,#f0f7ff,#fff 38%);
+}
+.plan-tag {
+  display:inline-block;
+  margin-bottom:8px;
+  padding:5px 9px;
+  border-radius:6px;
+  background:#eaf1f8;
+  color:#2c567a;
+  font-size:.69rem;
+  font-weight:800;
+  letter-spacing:.07em;
+}
+.tier.featured .plan-tag { background:#d9ebff;color:#245b8c; }
+.tier .price { font-size:2.35rem;letter-spacing:-.04em;color:#17283b; }
+.tier .billing { color:#778396; }
+.tier ul { padding-left:20px; }
+.tier li { margin:11px 0; }
+.tier li::marker { color:#328264; }
+.cta {
+  display:inline-block;
+  padding:14px 23px;
+  border-radius:11px;
+  background:#203d59;
+  box-shadow:0 5px 14px #203d591b;
+  transition:transform .15s,background .15s;
+}
+.cta:hover { transform:translateY(-2px);background:#315b80; }
+.tier .cta { width:100%;text-align:center; }
+details {
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:0 3px 12px #24344b06;
+}
+summary { line-height:1.5; }
+footer { border-top:1px solid #e4e9f0; }
+@media(max-width:600px) {
+  .hero { padding:60px 20px 54px; }
+  .hero h1 { font-size:2.5rem; }
+  section { padding:38px 0; }
+  .benefit,.tier { padding:23px; }
+}
+</style>
+
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
     <h1>Calculateur simple de marge pour artisans</h1>
-    <p>Application locale de calcul de marge avec validation des entrées.</p>
+    <p>Le calcul de marge pensé pour les artisans : estimez vos coûts, comprenez votre rentabilité et prenez de meilleures décisions, sans abonnement mensuel.</p>
     <p style="margin-top:18px"><a class="cta" href="mailto:Prixducontenu@gmail.com?subject=Commande — Calculateur simple de marge pour artisans">Commander maintenant</a></p>
     <p class="checkout-note">Commande par e-mail. Réponse avec le lien de livraison après validation du paiement.</p>
   </div>
@@ -42,65 +125,65 @@ footer { padding: 30px 20px; text-align: center; color: #6b7787; font-size: .85r
 <main class="wrap">
   <section>
     <h2>Le problème</h2>
-    <p>Problème métier non documenté.</p>
+    <p>Un devis peut sembler rentable sans l’être réellement. Entre les matériaux, la main-d’œuvre et les frais, il est facile de sous-estimer ses coûts et de réduire sa marge sans s’en rendre compte.</p>
     <h2 style="margin-top:26px">Pour qui</h2>
-    <p>artisans et petites entreprises indépendantes</p>
+    <p>Artisans, indépendants et petites entreprises qui veulent mieux maîtriser leurs coûts, préparer leurs devis et protéger leur rentabilité.</p>
   </section>
 
   <section>
-    <h2>Ce que le produit apporte</h2>
+    <h2>Moins d’incertitude. Plus de maîtrise.</h2><p class="section-intro">Un outil simple pour comprendre ce que vous coûte une prestation et ce qu’elle peut réellement vous rapporter.</p>
     <div class="grid">
       <div class="benefit">
-        <h3>Interface principale</h3>
-        <p>Inclus dans Calculateur simple de marge pour artisans. Utilisable immédiatement, sans installation ni service externe.</p>
+        <h3>Une interface claire</h3>
+        <p>Une utilisation simple, des champs clairs et une navigation conçue pour aller à l’essentiel, même sur téléphone.</p>
       </div>
       <div class="benefit">
-        <h3>Saisie des données</h3>
-        <p>Inclus dans Calculateur simple de marge pour artisans. Utilisable immédiatement, sans installation ni service externe.</p>
+        <h3>Vos coûts au même endroit</h3>
+        <p>Une utilisation simple, des champs clairs et une navigation conçue pour aller à l’essentiel, même sur téléphone.</p>
       </div>
       <div class="benefit">
-        <h3>Traitement de la demande</h3>
-        <p>Inclus dans Calculateur simple de marge pour artisans. Utilisable immédiatement, sans installation ni service externe.</p>
+        <h3>Un calcul rapide</h3>
+        <p>Une utilisation simple, des champs clairs et une navigation conçue pour aller à l’essentiel, même sur téléphone.</p>
       </div>
       <div class="benefit">
-        <h3>Résultat exploitable</h3>
-        <p>Inclus dans Calculateur simple de marge pour artisans. Utilisable immédiatement, sans installation ni service externe.</p>
+        <h3>Une marge plus lisible</h3>
+        <p>Une utilisation simple, des champs clairs et une navigation conçue pour aller à l’essentiel, même sur téléphone.</p>
       </div>
       <div class="benefit">
-        <h3>Sauvegarde locale</h3>
-        <p>Inclus dans Calculateur simple de marge pour artisans. Utilisable immédiatement, sans installation ni service externe.</p>
+        <h3>Vos données chez vous</h3>
+        <p>Une utilisation simple, des champs clairs et une navigation conçue pour aller à l’essentiel, même sur téléphone.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Pourquoi ce produit</h2>
+    <h2>Conçu pour votre quotidien</h2><p class="section-intro">Pas besoin d’un logiciel complexe pour commencer à mieux suivre ses marges.</p>
     <ul class="diff"><li>Fonctionne hors ligne (aucune donnée envoyée à un tiers)</li><li>Aucun abonnement obligatoire pour utiliser l&#x27;essentiel</li><li>Mise en route immédiate, sans compte à créer</li></ul>
   </section>
 
   <section>
-    <h2>Tarifs</h2>
+    <h2>Choisissez votre formule</h2><p class="section-intro">Commencez gratuitement, puis choisissez la formule adaptée à votre activité.</p>
     <div class="grid">
       <div class="tier">
-        <h3>Découverte</h3>
+        <span class="plan-tag">POUR ESSAYER</span><h3>Découverte</h3>
         <p class="price">Gratuit</p>
         <p class="billing">gratuit</p>
-        <p class="tier-desc">Valider l&#x27;usage sur un cas réel.</p>
-        <ul><li>Interface principale</li><li>Saisie des données</li><li>Traitement de la demande</li></ul>
+        <p class="tier-desc">Pour découvrir le fonctionnement et tester les calculs sur un besoin ponctuel. L’offre gratuite reste limitée aux fonctions essentielles.</p>
+        <ul><li>Une interface claire</li><li>Vos coûts au même endroit</li><li>Un calcul rapide</li></ul>
       </div>
       <div class="tier featured">
-        <h3>Pro</h3>
+        <span class="plan-tag">LE CHOIX DES INDÉPENDANTS</span><h3>Pro</h3>
         <p class="price">29&nbsp;EUR</p>
         <p class="billing">paiement unique</p>
-        <p class="tier-desc">Version complète pour usage professionnel.</p>
-        <ul><li>Interface principale</li><li>Saisie des données</li><li>Traitement de la demande</li><li>Résultat exploitable</li><li>Sauvegarde locale</li><li>Mises à jour pendant 12 mois</li><li>Support par e-mail</li></ul>
+        <p class="tier-desc">Pour les artisans qui utilisent régulièrement leurs calculs pour préparer leurs devis et suivre leur rentabilité.</p>
+        <ul><li>Une interface claire</li><li>Vos coûts au même endroit</li><li>Un calcul rapide</li><li>Une marge plus lisible</li><li>Vos données chez vous</li><li>Mises à jour pendant 12 mois</li><li>Support par e-mail</li></ul>
       </div>
       <div class="tier">
-        <h3>Business</h3>
+        <span class="plan-tag">POUR LES ÉQUIPES</span><h3>Business</h3>
         <p class="price">79&nbsp;EUR</p>
         <p class="billing">paiement unique</p>
-        <p class="tier-desc">Pour une équipe ou plusieurs postes.</p>
-        <ul><li>Interface principale</li><li>Saisie des données</li><li>Traitement de la demande</li><li>Résultat exploitable</li><li>Sauvegarde locale</li><li>Licence multi-postes</li><li>Mises à jour pendant 24 mois</li><li>Support prioritaire</li></ul>
+        <p class="tier-desc">Pour les entreprises qui veulent équiper plusieurs postes de travail et disposer d’une licence adaptée à leur équipe.</p>
+        <ul><li>Une interface claire</li><li>Vos coûts au même endroit</li><li>Un calcul rapide</li><li>Une marge plus lisible</li><li>Vos données chez vous</li><li>Licence multi-postes</li><li>Mises à jour pendant 24 mois</li><li>Support prioritaire</li></ul>
       </div>
     </div>
     <p style="margin-top:24px"><a class="cta" href="mailto:Prixducontenu@gmail.com?subject=Commande — Calculateur simple de marge pour artisans">Commander maintenant</a></p>
@@ -111,7 +194,7 @@ footer { padding: 30px 20px; text-align: center; color: #6b7787; font-size: .85r
     
       <details>
         <summary>À qui s&#x27;adresse ce produit ?</summary>
-        <p>Principalement à artisans et petites entreprises indépendantes.</p>
+        <p>Principalement à Artisans, indépendants et petites entreprises qui veulent mieux maîtriser leurs coûts, préparer leurs devis et protéger leur rentabilité..</p>
       </details>
       <details>
         <summary>Comment le produit est-il livré ?</summary>
@@ -130,7 +213,7 @@ footer { padding: 30px 20px; text-align: center; color: #6b7787; font-size: .85r
 
 <footer>
   <div class="wrap">
-    Page générée localement le 2026-10-11T12:31:23.
+    Un outil pratique pour mieux piloter la rentabilité de votre activité.
     Produit numérique · Aucun suivi, aucune donnée envoyée.
   </div>
 </footer>
